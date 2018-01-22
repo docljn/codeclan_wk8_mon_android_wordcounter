@@ -1,5 +1,6 @@
 package example.docljn.com.wordcounter;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -42,6 +43,9 @@ class Counter {
             output = output + "\"" + word + "\": " + getWordOccurrence(phrase).get(word) + ", ";
         }
 
+        output = output.substring(0, output.length() - 2);
+
         return output;
     }
+
 }
