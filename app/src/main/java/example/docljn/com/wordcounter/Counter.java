@@ -24,14 +24,18 @@ class Counter {
     public HashMap<String, Integer> getWordOccurrence(String phrase) {
         HashMap<String, Integer> wordOccurrence = new HashMap<>();
 
-        for (String word: getWordsList(phrase)) {
-            if (wordOccurrence.get(word) != null){
-                wordOccurrence.put(word, wordOccurrence.get(word) + 1);
-            } else {
-                wordOccurrence.put(word, 1);
+        if (phrase != "") {
+
+            for (String word : getWordsList(phrase)) {
+                if (wordOccurrence.get(word) != null) {
+                    wordOccurrence.put(word, wordOccurrence.get(word) + 1);
+                } else {
+                    wordOccurrence.put(word, 1);
+                }
+                // if key is in hashmap, add 1 to value
+                // if key is not in hashmap, add key and value = 1
             }
-            // if key is in hashmap, add 1 to value
-            // if key is not in hashmap, add key and value = 1
+
         }
         return wordOccurrence;
     }
@@ -43,7 +47,10 @@ class Counter {
             output = output + "\"" + word + "\": " + getWordOccurrence(phrase).get(word) + ", ";
         }
 
-        output = output.substring(0, output.length() - 2);
+        if (output.length()>=2) {
+
+            output = output.substring(0, output.length() - 2);
+        }
 
         return output;
     }

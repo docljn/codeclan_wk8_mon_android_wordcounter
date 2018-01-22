@@ -39,4 +39,10 @@ public class CounterTest {
         String output = "\"Hello\": 1, \"World\": 1";
         assertEquals(output, counter.outputWordsOccurrence("Hello World"));
     }
+
+    @Test
+    public void emptyStringIsOK(){
+        String output = "";
+        assertEquals(output, counter.outputWordsOccurrence(""));
+    }
 }
