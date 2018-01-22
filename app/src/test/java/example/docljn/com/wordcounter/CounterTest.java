@@ -22,7 +22,7 @@ public class CounterTest {
 
     @Test
     public void returnsWordCount(){
-        assertEquals(2, counter.getWordCount("Hello World"));
+        assertEquals("2", counter.getWordCount("Hello World"));
     }
 
     @Test

@@ -8,9 +8,9 @@ import java.util.Arrays;
  */
 
 class Counter {
-    public int getWordCount(String phrase) {
+    public String getWordCount(String phrase) {
         String words[] = phrase.split(" ");
         ArrayList<String> wordsList = new ArrayList<>(Arrays.asList(words));
-        return wordsList.size();
+        return String.valueOf(wordsList.size());
     }
 }
