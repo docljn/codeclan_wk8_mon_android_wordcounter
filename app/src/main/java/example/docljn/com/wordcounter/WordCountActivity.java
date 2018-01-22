@@ -32,7 +32,9 @@ public class WordCountActivity extends AppCompatActivity {
     public void onCountButtonClick(View button){
         String phrase = phraseEditText.getText().toString();
         Counter counter = new Counter();
-        String count = counter.getWordCount(phrase);
+        // String count = counter.getWordCount(phrase);
+        String count = counter.outputWordsOccurrence(phrase);
+
         result.setText(count);
 
         Log.d("OnCountButtonClick: " + phrase, getClass().toString());
