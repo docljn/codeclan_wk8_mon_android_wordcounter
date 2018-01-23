@@ -15,6 +15,7 @@ class Counter {
         String words[] = phrase.split(" ");
         ArrayList<String> wordsList = new ArrayList<>(Arrays.asList(words));
         return wordsList;
+        // TODO: remove punctuation, remove double spaces, remove capitals, BEFORE making arraylist
     }
 
     public String getWordCount(String phrase) {
